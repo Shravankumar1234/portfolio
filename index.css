@@ -109,6 +109,50 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+#experience {
+  
+  padding: 4rem 0;
+}
+
+.experience__item {
+  margin-bottom: 3rem;
+}
+
+.experience__item h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.experience__item h4 {
+  font-size: 1.5rem;
+  color: #e4edf6;
+  margin-bottom: 0.5rem;
+}
+
+.experience__duration {
+  display: block;
+  font-size: 1.5rem;
+  color: hsl(0, 100%, 96%);
+  margin-bottom: 2rem;
+}
+
+.experience__description {
+  font-size: 2rem;
+  color: #fff1f1;
+  margin-bottom: 1rem;
+}
+
+.experience__responsibilities {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.experience__responsibilities li {
+  font-size: 1.8rem;
+  color: #fffbfb;
+  margin-bottom: 1rem;
+}
+
 
 @media (max-width: 1000px) {
   html {
