@@ -109,10 +109,10 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-#experience {
+/* #experience {
   
   padding: 4rem 0;
-}
+} */
 
 .experience__item {
   margin-bottom: 3rem;
