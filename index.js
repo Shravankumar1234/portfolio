@@ -12,6 +12,12 @@ const handleFirstTab = (e) => {
 
 }
 
+function toggleMenu() {
+  document.querySelector('.nav__items').classList.toggle('active');
+}
+function closeMenu() {
+  document.querySelector('.nav__items').classList.remove('active');
+}
 const handleMouseDownOnce = () => {
   document.body.classList.remove('user-is-tabbing')
 

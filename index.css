@@ -165,51 +165,6 @@ html {
   padding: 4rem 0;
 } */
 
-.experience__item {
-  margin-bottom: 3rem;
-}
-
-.experience__item h3 {
-  font-family: Jost;
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-
-.experience__item h4 {
-  font-family: Jost;
-  font-size: 1.5rem;
-  color: #e4edf6;
-  margin-bottom: 0.5rem;
-}
-
-.experience__duration {
-  display: block;
-  font-family: Jost;
-  font-size: 1.5rem;
-  color: hsl(0, 100%, 96%);
-  margin-bottom: 2rem;
-}
-
-.experience__description {
-  font-family: Jost;
-  font-size: 2rem;
-  color: #fff1f1;
-  margin-bottom: 1rem;
-}
-
-.experience__responsibilities {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.experience__responsibilities li {
-  font-family: Jost;
-  font-size: 1.8rem;
-  color: #fffbfb;
-  padding-bottom: 0.5rem;
-}
-
 @media (max-width: 1000px) {
   html {
     font-size: 52%;
@@ -526,18 +481,45 @@ body:not(.user-is-tabbing) a:focus {
 .nav__items {
   display: flex;
   list-style: none;
+  gap: 1.5rem;
 }
 
 .nav__item:not(:last-child) {
   margin-right: var(--gutter-medium);
 }
+.menu-icon {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: white;
+  margin-right: 1rem;
+}
 
-@media (max-width: 510px) {
-  .nav {
+@media (max-width: 768px) {
+  .nav__items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    right: 0;
+    background-color: rgba(8, 23, 48, 0.9);
+    align-items: center;
     justify-content: center;
   }
   .nav > img {
     display: none;
+  }
+  .nav__items.active {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .row.head img {
+    position: absolute;
   }
 }
 
@@ -630,7 +612,54 @@ body:not(.user-is-tabbing) a:focus {
     transform: scale(0.8);
   }
 }
+
 /* --------------------------------------- */
+
+.experience__item {
+  margin-bottom: 2rem;
+}
+
+.experience__item h3 {
+  font-family: "Jost";
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.experience__item h4 {
+  font-family: "Jost";
+  font-size: 1.5rem;
+  color: #e4edf6;
+  margin-bottom: 0.5rem;
+}
+
+.experience__duration {
+  display: block;
+  font-family: "Jost";
+  font-size: 1.5rem;
+  color: hsl(0, 100%, 96%);
+  margin-bottom: 1rem;
+}
+
+.experience__description {
+  font-family: "Jost";
+  font-size: 2rem;
+  color: #fff1f1;
+  margin-bottom: 1rem;
+}
+
+.experience__responsibilities {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.experience__responsibilities li {
+  font-family: "Jost";
+  font-size: 1.8rem;
+  color: #fffbfb;
+  padding-bottom: 0.5rem;
+}
+
 /* ----- Skills ----- */
 /* --------------------------------------- */
 #clients {
@@ -945,5 +974,59 @@ body:not(.user-is-tabbing) a:focus {
   }
   60% {
     transform: translateY(-15px);
+  }
+}
+/* ----- About Section Adjustments for Mobile ----- */
+@media (max-width: 850px) {
+  .about {
+    height: auto;
+    padding-top: 3rem;
+    margin-bottom: 5rem;
+  }
+  .about__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .about__photo-container {
+    margin-bottom: 1rem;
+    order: -1;
+  }
+ 
+}
+
+/* ----- Experience Section Adjustments for Mobile ----- */
+@media (max-width: 850px) {
+  .experience__item {
+    margin-bottom: 1rem;
+  }
+  .experience__item h3,
+  .experience__item h4,
+  .experience__responsibilities {
+    font-family: "Jost";
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    padding: 2rem 0;
+  }
+}
+
+/* ----- Skills Section Adjustments for Mobile ----- */
+@media (max-width: 850px) {
+  #clients {
+    height: auto;
+    margin-top: 5rem;
+  }
+  .client__logos {
+    justify-content: center;
+    gap: 1rem;
+  }
+  .client__logo {
+    height: 5rem;
+    max-width: 100%;
+  }
+  .client__logos > div {
+    margin: 0.5rem;
+    text-align: center;
   }
 }
