@@ -809,6 +809,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 .projects > div {
   cursor: pointer;
+  
 }
 .projects > div:hover {
   box-shadow: 1px 1px rgba(255, 255, 255, 0.781),
@@ -826,6 +827,7 @@ body:not(.user-is-tabbing) a:focus {
   border-radius: 10px;
   text-align: center;
   overflow: hidden;
+
 }
 .bOpVhN h3 {
   margin: 1rem;
@@ -833,6 +835,7 @@ body:not(.user-is-tabbing) a:focus {
   font-size: 3rem;
   font-weight: bold;
   color: rgb(61, 63, 66);
+ 
 }
 .bOpVhN p {
   margin: 1rem;

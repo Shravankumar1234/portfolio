@@ -3,29 +3,28 @@
  ---------------------------------------- */
 
 const handleFirstTab = (e) => {
-  if(e.key === 'Tab') {
-    document.body.classList.add('user-is-tabbing')
+  if (e.key === "Tab") {
+    document.body.classList.add("user-is-tabbing");
 
-    window.removeEventListener('keydown', handleFirstTab)
-    window.addEventListener('mousedown', handleMouseDownOnce)
+    window.removeEventListener("keydown", handleFirstTab);
+    window.addEventListener("mousedown", handleMouseDownOnce);
   }
-
-}
+};
 
 function toggleMenu() {
-  document.querySelector('.nav__items').classList.toggle('active');
+  document.querySelector(".nav__items").classList.toggle("active");
 }
 function closeMenu() {
-  document.querySelector('.nav__items').classList.remove('active');
+  document.querySelector(".nav__items").classList.remove("active");
 }
 const handleMouseDownOnce = () => {
-  document.body.classList.remove('user-is-tabbing')
+  document.body.classList.remove("user-is-tabbing");
 
-  window.removeEventListener('mousedown', handleMouseDownOnce)
-  window.addEventListener('keydown', handleFirstTab)
-}
+  window.removeEventListener("mousedown", handleMouseDownOnce);
+  window.addEventListener("keydown", handleFirstTab);
+};
 
-window.addEventListener('keydown', handleFirstTab)
+window.addEventListener("keydown", handleFirstTab);
 
 const backToTopButton = document.querySelector(".back-to-top");
 let isBackToTopRendered = false;
